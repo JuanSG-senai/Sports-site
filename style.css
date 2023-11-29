@@ -1,9 +1,11 @@
+/* DEFININDO VALORES GLOBAIS */
 * {
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* DEFININDO HEARDER/NAVBAR */
 header {
     position: fixed;
     width: 100%;
@@ -34,8 +36,10 @@ header {
     margin-right: 2%;
 }
 
+/* DEFININDO GRUPO DE CARDS E OS CARDS */
 .card-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 5% 10%;
     gap: 2%;
@@ -46,7 +50,8 @@ header {
 }
 
 .card {
-    width: 50%;
+    width: 20%;
+    margin-bottom: 2%;
     text-align: center;
     background-color: slategray;
     border-radius: 5%;
@@ -56,9 +61,11 @@ header {
 .card-title {
     margin-top: 2%;
     color: white;
+    font-size: 58px;
 }
 
 .card-button {
+    font-size: 200%;
     color: white;
     background-color: lightseagreen;
     margin: 5% 0;
@@ -70,4 +77,39 @@ header {
 
 .card-button:hover {
     background-color: dimgray;
+}
+
+/* DEFININDO RESPONSIVIDADE DOS CARDS E SEUS ELEMENTOS */
+
+@media screen and (max-width: 1500px) {
+    .card-title {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .card-title {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .card-button {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .card-title {
+        font-size: 58px;
+    }
+    .card {
+        width: 90%;
+    }
 }
