@@ -22,7 +22,7 @@ function abrirOuFecharMenu () {
         linkGroup.style.display = "flex";
         linkGroup.style.flexDirection = "column";
         linkGroup.style.marginLeft = "initial";
-        linkGroup.style.marginTop = "5%";
+        linkGroup.style.marginTop = "30px";
         menu.innerHTML = "close";
     } else {
         linkGroup.style.display = "none";

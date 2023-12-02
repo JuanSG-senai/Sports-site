@@ -140,6 +140,8 @@ header {
     }
 }
 
+/* DEFININDO A MUDANÇA DO LINK GROUP PARA MENU HAMBURGUER */
+
 @media screen and (max-width: 700px) {
     .nav-link-group {
         display: none;
