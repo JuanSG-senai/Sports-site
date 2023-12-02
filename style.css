@@ -90,10 +90,42 @@ header {
     background-color: dimgray;
 }
 
+/* DEFININDO O CARROSSEL E SEUS ELEMENTOS */
+
+.carrossel-section {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+.seta-carrossel {
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 100px;
+}
+
+.esquerda {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.5));
+    margin-right: 5px;
+}
+
+.direita {
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.5));
+    margin-left: 5px;
+}
+
 /* DEFININDO A CUSTOMIZAÇÃO DA SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 15px;
+    height: 15px;
 }
 
 ::-webkit-scrollbar-track {

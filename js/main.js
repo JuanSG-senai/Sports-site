@@ -29,3 +29,34 @@ function abrirOuFecharMenu () {
         menu.innerHTML = "menu";
     }
 }
+
+// CRIANDO AS FUNCIONALIDADES DO CARROSSEL E DE SEUS ELEMENTOS
+
+window.onload = () => {
+    const slides = document.querySelectorAll(".carrossel-img");
+
+    for (let ind = 0; ind < slides.length; ind++) {
+        slides[ind].style.width = "100%";
+    }
+}
+
+let i = 0;
+
+function next () {
+    if (i == 4) {
+        i = 0;
+        document.getElementById(i).scrollIntoView();
+    } else {
+        i++;
+        document.getElementById(i).scrollIntoView();
+    }
+}
+function prev () {
+    if (i == 0) {
+        i = 4;
+        document.getElementById(i).scrollIntoView();
+    } else {
+        i--;
+        document.getElementById(i).scrollIntoView();
+    }
+}
