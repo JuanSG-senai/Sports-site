@@ -104,21 +104,28 @@ header {
     scroll-behavior: smooth;
 }
 
+.carrossel-img {
+    width: calc(100% - 10px);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
 .seta-carrossel {
+    color: white;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 100px;
+    margin: 10px;
+    font-size: 50px;
+    width:50px;
 }
 
 .esquerda {
-    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.5));
-    margin-right: 5px;
+    background: linear-gradient(to left, rgba(32, 178, 170, 1), rgb(32, 178, 170, 0.5));
 }
 
 .direita {
-    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.5));
-    margin-left: 5px;
+    background: linear-gradient(to right, rgba(32, 178, 170, 1), rgb(32, 178, 170, 0.5));
 }
 
 /* DEFININDO A CUSTOMIZAÇÃO DA SCROLLBAR */

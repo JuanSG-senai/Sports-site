@@ -5,10 +5,7 @@ let cg = document.getElementById("cg");
 
 header.style.top = 0;
 
-console.log(header.clientHeight);
-
 let headerAltura = header.clientHeight;
-let mtMain = headerAltura + 20;
 
 cg.style.marginTop = headerAltura + "px";
 
@@ -32,31 +29,41 @@ function abrirOuFecharMenu () {
 
 // CRIANDO AS FUNCIONALIDADES DO CARROSSEL E DE SEUS ELEMENTOS
 
-window.onload = () => {
-    const slides = document.querySelectorAll(".carrossel-img");
+let i = 0;
+const imagensCarrossel = document.querySelectorAll(".carrossel-img");
 
-    for (let ind = 0; ind < slides.length; ind++) {
-        slides[ind].style.width = "100%";
-    }
+const imagemSelecionada = () => {
+    imagensCarrossel.forEach(imagem => {
+        imagem.style.opacity = "30%";
+        imagem.style.border = "5px solid rgb(32,178,170,0)";
+    })
+    document.getElementById(i).style.opacity = "100%";
+    document.getElementById(i).style.border = "5px solid rgb(32,178,170,1)";
 }
 
-let i = 0;
+window.onload = () => {
+    imagemSelecionada();
+}
 
 function next () {
     if (i == 4) {
         i = 0;
-        document.getElementById(i).scrollIntoView();
+        document.getElementById(i).scrollIntoView({inline: "center"});
     } else {
         i++;
-        document.getElementById(i).scrollIntoView();
+        document.getElementById(i).scrollIntoView({inline: "center"});
     }
+
+    imagemSelecionada();
 }
 function prev () {
     if (i == 0) {
         i = 4;
-        document.getElementById(i).scrollIntoView();
+        document.getElementById(i).scrollIntoView({inline: "center"});
     } else {
         i--;
-        document.getElementById(i).scrollIntoView();
+        document.getElementById(i).scrollIntoView({inline: "center"});
     }
+
+    imagemSelecionada();
 }
