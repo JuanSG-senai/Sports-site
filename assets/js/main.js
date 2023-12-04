@@ -48,10 +48,10 @@ window.onload = () => {
 function next () {
     if (i == 4) {
         i = 0;
-        document.getElementById(i).scrollIntoView({inline: "center"});
+        document.getElementById(i).scrollIntoView({inline: "center", block: "center"});
     } else {
         i++;
-        document.getElementById(i).scrollIntoView({inline: "center"});
+        document.getElementById(i).scrollIntoView({inline: "center", block: "center"});
     }
 
     imagemSelecionada();
@@ -59,10 +59,10 @@ function next () {
 function prev () {
     if (i == 0) {
         i = 4;
-        document.getElementById(i).scrollIntoView({inline: "center"});
+        document.getElementById(i).scrollIntoView({inline: "center", block: "center"});
     } else {
         i--;
-        document.getElementById(i).scrollIntoView({inline: "center"});
+        document.getElementById(i).scrollIntoView({inline: "center", block: "center"});
     }
 
     imagemSelecionada();
