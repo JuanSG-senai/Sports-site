@@ -216,7 +216,7 @@ footer {
     }
 }
 
-/* DEFININDO A MUDANÇA DO LINK GROUP PARA MENU HAMBURGUER */
+/* DEFININDO A MUDANÇA DO LINK GROUP PARA MENU HAMBURGUER E RESPONSIVIDADE DO FOOTER */
 
 @media screen and (max-width: 700px) {
     .nav-link-group {
@@ -224,5 +224,19 @@ footer {
     }
     #menu {
         display: flex;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footerAtalho {
+        margin-left: 50px;
+    }
+    .footerAtalho:first-child {
+        margin-top: 30px;
+    }
+    .copyright {
+        font-size: 18px;
     }
 }
